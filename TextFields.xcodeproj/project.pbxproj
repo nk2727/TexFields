@@ -14,6 +14,8 @@
 		BB267DA41CA45E8600440AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB267DA21CA45E8600440AA7 /* LaunchScreen.storyboard */; };
 		BB267DAF1CA45E8600440AA7 /* TextFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB267DAE1CA45E8600440AA7 /* TextFieldsTests.swift */; };
 		BB267DBA1CA45E8600440AA7 /* TextFieldsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB267DB91CA45E8600440AA7 /* TextFieldsUITests.swift */; };
+		BB267DC81CA4600900440AA7 /* ZipCodeFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB267DC71CA4600900440AA7 /* ZipCodeFieldDelegate.swift */; };
+		BB267DCA1CA4615700440AA7 /* CashFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB267DC91CA4615700440AA7 /* CashFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BB267DB51CA45E8600440AA7 /* TextFieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB267DB91CA45E8600440AA7 /* TextFieldsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsUITests.swift; sourceTree = "<group>"; };
 		BB267DBB1CA45E8600440AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB267DC71CA4600900440AA7 /* ZipCodeFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeFieldDelegate.swift; sourceTree = "<group>"; };
+		BB267DC91CA4615700440AA7 /* CashFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				BB267D991CA45E8600440AA7 /* AppDelegate.swift */,
 				BB267D9B1CA45E8600440AA7 /* ViewController.swift */,
+				BB267DC71CA4600900440AA7 /* ZipCodeFieldDelegate.swift */,
+				BB267DC91CA4615700440AA7 /* CashFieldDelegate.swift */,
 				BB267D9D1CA45E8600440AA7 /* Main.storyboard */,
 				BB267DA01CA45E8600440AA7 /* Assets.xcassets */,
 				BB267DA21CA45E8600440AA7 /* LaunchScreen.storyboard */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB267DC81CA4600900440AA7 /* ZipCodeFieldDelegate.swift in Sources */,
 				BB267D9C1CA45E8600440AA7 /* ViewController.swift in Sources */,
+				BB267DCA1CA4615700440AA7 /* CashFieldDelegate.swift in Sources */,
 				BB267D9A1CA45E8600440AA7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

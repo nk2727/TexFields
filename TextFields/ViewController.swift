@@ -8,18 +8,52 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
 
+    //
+    // outlets for the fields and switch
+    //
+    @IBOutlet weak var zipCodeField: UITextField!
+    @IBOutlet weak var cashField: UITextField!
+    @IBOutlet weak var lockableField: UITextField!
+    @IBOutlet weak var lockableSwitch: UISwitch!
+    
+    //
+    // get delegate objects 
+    //
+    let zipCodeDelegate = ZipCodeFieldDelegate()
+    let cashDelegate = CashFieldDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      
+        //
+        //call delegates
+        //
+        self.zipCodeField.delegate=self.zipCodeDelegate
+        self.cashField.delegate=self.cashDelegate
+        self.lockableField.delegate=self
+        self.lockableSwitch.setOn(false, animated: false)
+    }
+    
+    //
+    // Lockable Text Field Delegate
+    //
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return self.lockableSwitch.on
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true;
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func toggleLockableSwitch(sender: AnyObject) {
+        
+        if !(sender as! UISwitch).on {
+            self.lockableField.resignFirstResponder()
+        }
     }
-
-
 }
 
