@@ -19,8 +19,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var lockableSwitch: UISwitch!
     
     //
-    // get delegate objects 
+    // create delegate objects for zipcode and cash fields
+    // the last text field with a switch, it's delegate is in this file
+    // below
     //
+    
     let zipCodeDelegate = ZipCodeFieldDelegate()
     let cashDelegate = CashFieldDelegate()
     
@@ -32,8 +35,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
         //
         self.zipCodeField.delegate=self.zipCodeDelegate
         self.cashField.delegate=self.cashDelegate
+      
         self.lockableField.delegate=self
         self.lockableSwitch.setOn(false, animated: false)
+        
     }
     
     //
